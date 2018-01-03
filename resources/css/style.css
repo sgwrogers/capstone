@@ -110,11 +110,29 @@ nav a {
 button {
   margin-right: 1.5rem;
   background-color: #43cea2;
-  color: white;
   border: none;
   width: 96%;
-  font-size: 1rem;
   padding: 0.5rem 0;
+}
+
+button a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+button:hover {
+  background-color: #FF8D53;
+  transition: background-color 1s linear;
+}
+
+button:active {
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 2px;
 }
 
 /* Section 1 */
@@ -148,7 +166,7 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   width: 40%;
-  border-left: 1px solid gray;
+  border-left: 1px solid #43cea2;
 }
 
 .story {
@@ -175,16 +193,26 @@ button {
   align-self: center;
 }
 
+.story-text a {
+    color: #185a9d;
+    text-decoration: none;
+}
+
+.story:last-child a {
+  color: #FF8D53;
+}
+
 /* Courses Section */
 
 .gallery {
-  background-color: lightgrey;
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
 }
 
 .gallery h3 {
   padding-top: 2rem;
   text-align: center;
-  text-transform: uppercase;
+  font-weight: bold;
+  color: dimgray;
 }
 
 .courses {
@@ -229,7 +257,7 @@ button {
 }
 .thesis-section h2 {
   text-align: center;
-  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .thesis {
@@ -246,6 +274,7 @@ button {
 
 .thesis-video-text h3 {
   margin: 1.5rem 0 0.5rem 0;
+  font-size: 2rem;
 }
 
 .thesis-right {
@@ -281,18 +310,19 @@ button {
 
 /* Footer */
 footer {
+  background-color: #27829F;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid grey;
+
   padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
 .copyright {
-
+  color: white;
 }
 
 .terms a {
   text-decoration: none;
-  color: grey;
+  color: white;
   margin-left: 1rem;
 }
