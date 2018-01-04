@@ -11,7 +11,7 @@
     <header>
       <div class="colmar">
         <div class="colmar-logo">
-          <img src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo"/>
+          <a href="index.html"><img src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo"/></a>
         </div>
         <div class="colmar-name">
           <h3>COLMAR<span>ACADEMY</span></h3>
@@ -23,6 +23,12 @@
         <span><a href="#">Online</a></span>
         <span><a href="#">For companies</a></span>
         <span><a href="#">Sign in</a></span>
+      </nav>
+
+      <nav class="mobile">
+        <span><a href="#"><img src="./resources/images/ic-on-campus.svg"/></a></span>
+        <span><a href="#"><img src="./resources/images/ic-online.svg"/></a></span>
+        <span><a href="#"><img src="./resources/images/ic-login.svg"/></a></span>
       </nav>
 
     </header>
@@ -57,7 +63,8 @@
         <div class="container-right">
           <div class="story">
             <div class="story-image">
-              <img src="./resources/images/information-orientation.jpg" alt="path with shadows"/>
+              <img src="./resources/images/information-orientation.jpg" class="desktop-pic" alt="path with shadows"/>
+              <img src="./resources/images/information-orientation-mobile.jpg" class="mobile-pic" alt="path with shadows"/>
             </div>
 
             <div class="story-text">
@@ -69,7 +76,8 @@
           <!--Side Story 2 -->
           <div class="story">
             <div class="story-image">
-              <img src="./resources/images/information-campus.jpg" alt="room with world map"/>
+              <img src="./resources/images/information-campus.jpg" class="desktop-pic" alt="room with world map"/>
+              <img src="./resources/images/information-campus-mobile.jpg" class="mobile-pic" alt="room with world map"/>
             </div>
 
             <div class="story-text">
@@ -81,7 +89,8 @@
           <!--Side Story 3 -->
           <div class="story">
             <div class="story-image">
-              <img src="./resources/images/information-guest-lecture.jpg" alt="Oliver Sack"/>
+              <img src="./resources/images/information-guest-lecture.jpg" class="desktop-pic" alt="Oliver Sack"/>
+              <img src="./resources/images/information-guest-lecture-mobile.jpg" class="mobile-pic" alt="Oliver Sack"/>
             </div>
 
             <div class="story-text">
@@ -194,12 +203,14 @@
       </div>
 
       <footer>
-        <div class="copyright">
-          <p>&copy; 2018 Colmar Academy. All rights reserved</p>
+        <div class="copyterms">
+          <div class="copyright">
+            <p>&copy; 2018 Colmar Academy. All rights reserved</p>
+          </div>
+          <div class="terms">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
         </div>
-        <div class="terms">
-          <span><a href="#">Terms</a></span>
-          <span><a href="#">Privacy</a></span>
       </footer>
   </body>
 </html>
