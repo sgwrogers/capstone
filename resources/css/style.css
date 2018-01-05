@@ -71,22 +71,14 @@ nav a {
   display: none;
 }
 
-@media only screen and (max-width: 480px) {
-  header {
-    height: 4rem;
-  }
-
-  .colmar-name,
+@media only screen and (max-width: 765px) {
   nav {
     display: none;
   }
 
-.colmar img {
-  height: 2.5rem;
-}
   .mobile {
     display: flex;
-    width: 70%;
+    width: 50%;
     justify-content: space-between;
     margin-right: 1.5rem;
   }
@@ -94,6 +86,23 @@ nav a {
   .mobile img {
     height: 2rem;
     padding: 0 .75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 4rem;
+  }
+
+  .colmar-name {
+    display: none;
+  }
+
+.colmar img {
+  height: 2.5rem;
+}
+  .mobile {
+    width: 70%;
   }
 }
 
@@ -122,6 +131,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 2.5rem .5rem 2.5rem 0;
 }
 
 .banner-text {
@@ -130,13 +140,11 @@ nav a {
 
 .banner-text h1 {
   color: white;
-  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
 .banner-text h4 {
-  font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
 }
@@ -146,7 +154,7 @@ button {
   background-color: #43cea2;
   border: none;
   width: 96%;
-  padding: 0.5rem 0;
+
 }
 
 button a {
@@ -169,7 +177,45 @@ button:active {
   top: 2px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1160px) {
+  .banner-text h1 {
+    font-size: 3.25rem;
+  }
+
+  .banner-text h4 {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 1018px) {
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+
+  .banner-text h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 877px) {
+  .banner-main {
+    padding: 2rem 1.5rem;
+  }
+
+  .banner-right {
+    padding: 2rem 0rem 2rem 0;
+  }
+
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-text h4 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 765px) {
   .banner {
     flex-direction: column;
   }
@@ -181,12 +227,24 @@ button:active {
 
   .banner-right {
     width: 100%;
+    align-items: center;
+    padding: 0;
   }
 
   .banner-text {
-    margin: 2rem 1rem .75rem 1rem;
+    width: 90%;
+    margin: 2rem auto .75rem auto;
   }
 
+  button {
+    width: 90%;
+    margin: .75rem auto 2rem auto;
+    background-color: #FF8D53;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
   .banner-text h1 {
     font-size: 2rem;
   }
@@ -194,12 +252,6 @@ button:active {
   .banner-text h4 {
     font-size: 1rem;
     margin-bottom: 0;
-  }
-
-  button {
-    width: 90%;
-    margin: .75rem auto 2rem auto;
-    background-color: #FF8D53;
   }
 }
 
@@ -211,7 +263,8 @@ button:active {
 
 .container-left {
   padding: 2.5rem 2rem;
-  width: 60%;
+  flex-basis: 60%; /* formerly width */
+  flex-shrink: 1; /* how can i use this effectively? */
 }
 
 .container-left img {
@@ -233,8 +286,9 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 40%;
+  flex-basis: 40%; /* formerly width */
   border-left: 1px solid #43cea2;
+  flex-shrink: 2; /* how can I use this effectively? */
 }
 
 .mobile-pic {
@@ -270,21 +324,54 @@ button:active {
     text-decoration: none;
 }
 
-.story-text h4, p, a {
+.story-text h4,
+.story-text p,
+.story-text a {
   margin: 1rem 0;
 }
 
 .story:last-child a {
   color: #FF8D53;
 }
+/*
+@media only screen and (max-width: 1176px) {
+  .container-left {}
+}
 
+@media only screen and (max-width: 1042px) {
+  .container-left {
+    width: 50%;
+  }
+  .container-right {
+    width: 50%;
+  }
+
+  .story-text {
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (max-width: 976px) {
+  .story-image {
+    width: 40%;
+    padding: 1rem;
+  }
+  .story-text {
+    width: 60%;
+  }
+
+  .story-text h4 {
+    font-size: 1rem;
+  }
+}
+*/
 @media only screen and (max-width: 480px) {
   .container-left {
     display: none;
   }
 
   .container-right {
-    width: 100%;
+    flex-basis: 100%; /* do i use this instead of width */
   }
 
   .story {
@@ -485,7 +572,7 @@ button:active {
 /* Footer */
 footer {
   background-color: #27829F;
-  padding: 1rem 1.5rem 3rem 1.5rem;
+  padding: 2rem 1.5rem 5rem 1.5rem;
 }
 
 .copyterms {
@@ -503,7 +590,6 @@ footer {
 .terms a {
   text-decoration: none;
   color: white;
-  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 480px) {
