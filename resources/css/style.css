@@ -1,9 +1,10 @@
 body {
   font-size: 16px;
   font-family: Helvetica;
+  color: dimgray;
 }
 
-h1 {
+/h1 {
   font-size: 4rem;
 }
 
@@ -140,6 +141,7 @@ nav a {
 
 .banner-text h1 {
   color: white;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
@@ -162,6 +164,7 @@ button a {
   font-size: 1.5rem;
   text-decoration: none;
   display: block;
+  padding: 0.5rem 0;
 }
 
 button:hover {
@@ -263,8 +266,7 @@ button:active {
 
 .container-left {
   padding: 2.5rem 2rem;
-  flex-basis: 60%; /* formerly width */
-  flex-shrink: 1; /* how can i use this effectively? */
+  width: 60%;
 }
 
 .container-left img {
@@ -286,9 +288,8 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex-basis: 40%; /* formerly width */
+  width: 40%;
   border-left: 1px solid #43cea2;
-  flex-shrink: 2; /* how can I use this effectively? */
 }
 
 .mobile-pic {
@@ -333,48 +334,117 @@ button:active {
 .story:last-child a {
   color: #FF8D53;
 }
-/*
-@media only screen and (max-width: 1176px) {
-  .container-left {}
-}
 
-@media only screen and (max-width: 1042px) {
+@media only screen and (max-width: 1188px) {
   .container-left {
     width: 50%;
   }
   .container-right {
     width: 50%;
-  }
-
-  .story-text {
-    align-self: flex-start;
-  }
+    }
 }
 
 @media only screen and (max-width: 976px) {
+  .container-left {
+    width: 40%;
+  }
+  .container-right {
+    width: 60%;
+    }
+}
+
+@media only screen and (max-width: 814px) {
   .story-image {
     width: 40%;
     padding: 1rem;
   }
   .story-text {
     width: 60%;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (max-width: 782px) {
+  .section {
+    flex-direction: column;
+
+  }
+
+  .container-left {
+    background: url("../images/information-main.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 0;
+  }
+
+  #container-left-text {
+    background-color: dimgray;
+    opacity: 0.9;
+    color: white;
+    padding: 1rem;
+  }
+
+  .container-left img {
+    display: none;
+  }
+
+  .container-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .story {
+    width: 50%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .story:last-child {
+    width: 100%;
+
+  }
+
+  .story:last-child .desktop-pic {
+    display: none;
+  }
+
+  .story:last-child .mobile-pic {
+    display: flex;
+  }
+
+  .story-image {
+    width: 85%;
+    margin: 0.5rem auto 0 auto;
+  }
+
+  .story:last-child .story-image {
+    width: 90%;
+  }
+
+  .story-text {
+    width: 90%;
+    margin: 0 auto 0.5rem auto;
   }
 
   .story-text h4 {
-    font-size: 1rem;
+    margin-top: 0;
   }
 }
-*/
+
 @media only screen and (max-width: 480px) {
   .container-left {
     display: none;
   }
 
   .container-right {
-    flex-basis: 100%; /* do i use this instead of width */
+    flex-direction: column;
+    width: 100%; /* do i use this instead of width */
   }
 
   .story {
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -456,6 +526,26 @@ button:active {
 
 .course img {
   width: 100%;
+}
+
+@media only screen and (max-width: 790px) {
+  .courses {
+    margin: 2rem;
+  }
+
+  .course {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .courses {
+    margin: 2rem;
+  }
+
+  .course {
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -547,6 +637,50 @@ button:active {
 .thesis-story-text {
   width: 65%;
   align-self: center;
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 977px) {
+  .thesis {
+    flex-direction: column;
+  }
+
+  .thesis-left {
+    width: 90%;
+    padding: 0;
+    margin: 1.25rem auto;
+  }
+
+  .thesis-right {
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid dimgray;
+  }
+
+  .thesis-story {
+      width: 50%;
+      margin-top: 0;
+  }
+
+  .thesis-story:first-child {
+    background: white;
+    color: black;
+  }
+
+  .thesis-story-image {
+    width: 40%;
+  }
+
+  .thesis-story-text {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .thesis-video-text,
+  .thesis-right {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -561,11 +695,6 @@ button:active {
   .thesis-left {
     width: 100%;
     padding: 0;
-  }
-
-  .thesis-video-text,
-  .thesis-right {
-    display: none;
   }
 }
 
