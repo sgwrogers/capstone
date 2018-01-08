@@ -713,12 +713,29 @@ footer {
 }
 
 .copyright {
+  width: 33%;
   color: white;
+}
+
+.social {
+  width: 33%;
+  color: white;
+  text-align: center;
+}
+
+.social i {
+  padding: 0 1rem;
+}
+
+.terms {
+  width: 33%;
+  text-align: right;
 }
 
 .terms a {
   text-decoration: none;
   color: white;
+  padding: 0 1rem;
 }
 
 @media only screen and (max-width: 480px) {
