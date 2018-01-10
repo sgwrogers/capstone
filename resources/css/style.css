@@ -316,6 +316,7 @@ button:active {
 .story-text p,
 .story-text a {
   margin: 1rem 0;
+  padding-right: 1rem;
 }
 
 .story:last-child a {
@@ -427,7 +428,7 @@ button:active {
 
   .container-right {
     flex-direction: column;
-    width: 100%; /* do i use this instead of width */
+    width: 100%;
   }
 
   .story {
@@ -501,6 +502,15 @@ button:active {
   font-weight: bold;
 }
 
+.course:hover {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  transition: all 0.25s linear;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
 .uppercase {
   margin: 0.5rem 1rem;
   font-size: 1rem;
@@ -537,6 +547,10 @@ button:active {
 }
 
 @media only screen and (max-width: 480px) {
+  .gallery h2 {
+    font-size: 2rem;
+  }
+
   .courses {
     flex-direction: column;
     align-items: center;
@@ -546,15 +560,6 @@ button:active {
 
   .course {
     width: 90%;
-  }
-
-  .course:hover {
-    background: linear-gradient(to right, #43cea2, #185a9d);
-    color: white;
-    transition: all 2s linear;
-    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
-  	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
-  	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
   }
 
   .course:active {
