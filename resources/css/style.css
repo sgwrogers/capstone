@@ -1,7 +1,5 @@
 html {
-  font-size: 16px;
-  font-family: Helvetica;
-  color: dimgray;
+  font-family: 'Raleway';
 }
 
 
@@ -35,7 +33,7 @@ header {
 }
 
 .colmar h4 span {
-  color: #43cea2;
+  color: #27829F;
   font-weight: 400;
 }
 
@@ -137,6 +135,8 @@ button {
   margin-right: 1.5rem;
   background-color: #43cea2;
   border: none;
+  text-transform: uppercase;
+  font-family: 'Raleway';
   width: 96%;
 
 }
@@ -310,6 +310,11 @@ button:active {
 .story-text a {
     color: #185a9d;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.story-text a:hover {
+    color: #FF8D53;
 }
 
 .story-text h4,
@@ -321,6 +326,10 @@ button:active {
 
 .story:last-child a {
   color: #FF8D53;
+}
+
+.story:last-child a:hover {
+  color: white;
 }
 
 @media only screen and (max-width: 1188px) {
@@ -479,7 +488,7 @@ button:active {
   padding-top: 2rem;
   text-align: center;
   font-weight: bold;
-  color: dimgray;
+  color: #27829F;
 }
 
 .courses {
@@ -580,6 +589,7 @@ button:active {
   width: 100%;
 }
 .thesis-section h2 {
+  color: #27829F;
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
